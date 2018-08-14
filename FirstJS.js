@@ -82,3 +82,14 @@ console.log(result);
 // let yourCoffee = new Coffee("french", "hot", 16);
 // alert(yourCoffee.flavor);
 
+//more Object practice
+function ObjectName(param1, param2){
+    this.param1 = param1;
+    this.param2 = param2;
+    this.toString = function(){
+    return this.param1 + ' ' + param2;
+    }
+}
+
+var obj = new ObjectName(hello, world); //throws an error, hello is not defined
+console.log(obj); 
