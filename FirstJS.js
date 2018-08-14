@@ -51,45 +51,48 @@ console.log(result);
 // }
 
 //creating an object and using a function
-// let myCoffee = 
-// {
-//     flavor: "espresso",
-//     temperature: "iced",
-//     ounces: 24,
-//     milk: false ,
+let myCoffee = 
+{
+    flavor: "espresso",
+    temperature: "iced",
+    ounces: 24,
+    milk: false ,
 
-//     addIce: function()
-//     {
-//         if(myCoffee.temperature == "warm")
-//             myCoffee.temperature = "iced";
-//             alert("We have added ice to your coffee");
-//     }
-// };
-
+    addIce: function()
+    {
+        if(myCoffee.temperature == "warm")
+            myCoffee.temperature = "iced";
+            console.log("We have added ice to your coffee")
+            //alert("We have added ice to your coffee");
+    }
+};
+console.log(myCoffee.ounces);
 // alert(myCoffee.ounces);
 
-// myCoffee.temperature = "warm";
-// myCoffee.addIce();
+myCoffee.temperature = "warm";
+myCoffee.addIce();
 
 //creating an object constructor and creating an instance of Coffee
-// function Coffee(flavor, temperature, ounces)
-// {
-//     this.flavor = flavor;
-//     this.temperature = temperature;
-//     this.ounces = ounces;
-// }
-
-// let yourCoffee = new Coffee("french", "hot", 16);
-// alert(yourCoffee.flavor);
-
-//more Object practice
-function ObjectName(param1, param2){
-    this.param1 = param1;
-    this.param2 = param2;
-    this.toString = function(){
-    return this.param1 + ' ' + param2;
-    }
+function Coffee(flavor, temperature, ounces)
+{
+    this.flavor = flavor;
+    this.temperature = temperature;
+    this.ounces = ounces;
 }
 
-var obj = new ObjectName(hello, world); //throws an error, hello is not defined
-console.log(obj); 
+let yourCoffee = new Coffee("french", "hot", 16);
+console.log(yourCoffee.flavor);
+//alert(yourCoffee.flavor);
+
+//more Object practice - needs adjustments
+// function ObjectName(param1, param2){
+//     this.param1 = param1;
+//     this.param2 = param2;
+//     // this.toString = function(){
+//     // return this.param1 + ' ' + param2;
+//     //}
+//     console.log(param1 + ' ' + param2);
+// }
+
+// var obj = new ObjectName("hello", "world");
+// console.log(obj); 
